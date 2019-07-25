@@ -5,7 +5,7 @@ Created on Tue Jul 23 22:29:22 2019
 Create a data scraper for a particular e-commerce website relating to auto sales.
 
 Motivation is simple: 
-        Shopping for a car is stressful- they are expensive purchase that quickly depreciate.
+        Shopping for a car is stressful- they are expensive purchases that quickly depreciate.
         I want to simplify the process for myself by scraping the data to identify the best deals without paging through hundreds of listings or manual data entry.
         Maybe there is a relationship between year+mileage+trim which can be modeled?
         
