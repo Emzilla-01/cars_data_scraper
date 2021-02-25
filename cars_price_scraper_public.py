@@ -99,7 +99,7 @@ def get_stats(row):
     stats_dict=row.find("div", class_=stats_name).prettify().replace("false","False").replace('true',"True")
     stats_dict=find_txt(stats_dict, d1="vehicle=\'", d2="\'>")
     stats_dict = eval(stats_dict)
-    stats_dict.setdefault("link", f"https://www.a-popular-cars-listing-website.com/vehicledetail/detail/{stats_dict.get('listingId')}/overview/")
+    stats_dict.setdefault("link", f"https://www.cars.com/vehicledetail/detail/{stats_dict.get('listingId')}/overview/")
     price= find_txt(row.find("span", class_=price_name).prettify()).strip("$").strip(",")
     price= float(price.replace(",", ""))
     stats_dict.setdefault("price", price)
