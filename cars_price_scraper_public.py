@@ -2,6 +2,31 @@
 """
 Created on Tue Jul 23 22:29:22 2019
 
+################################################################################
+retrospective 2-24-2021
+
+QUICK AND DIRTY WEB SCRAPER FOR CARS DATA
+
+TAKES A URLPATTERN FROM THE SITE FOR A PARTICULAR MAKE AND MODEL
+OUTPUTS A CSV WITH SOME MINIMAL WEIGHTAGE FUNCTIONALITY
+
+url   MAIN INPUT IS FROM WEBSITE COPIED AND SOME MANUAL TRIMMING IS APPLIED TO FORM QUERY
+.xlsx MAIN OUTPUT 
+
+EVEN IF IMPLEMENTATION IS UGLY OR NOT PEP8, 
+THIS WAS A QUICK SCRIPT TO PERFORM
+A BUSINESS FUNCTION,
+IN THIS CASE TO SCRAPE LISTINGS RATHER THAN MAUALLY CLICKING THROUGH FRONTEND
+AND RECORDING PRICES, & OTHER ATTRIBUTES
+
+NAMES OF PRICES & OTHER ATTRIBUTES WERE EXPOSED INSIDE SEARCH PATTERNS RETURNED BY SEARCH FORM SELECTION.
+SITE URL PATTERN INTO SCRIPT -> RECORD N PAGES OF AUTO LISTINGS INTO A TABULAR FILE LIKE CSV, EXCEL
+
+TIME TO REVISE WILL COME AGAIN
+
+################################################################################
+
+
 Create a data scraper for a particular e-commerce website relating to auto sales.
 
 Motivation is simple: 
@@ -44,7 +69,7 @@ pd.set_option('display.max_columns', 8)
 #url="https://www.a-popular-cars-listing-website.com/for-sale/searchresults.action/?mdId=20823&mkId=20017&prMx=8000&rd=50&searchSource=QUICK_FORM&zc=08540&perPage=100"
 url="https://www.a-popular-cars-listing-website.com/for-sale/searchresults.action/?dealerType=all&drCntId=28002&mdId=20823&mkId=20017&page=1&perPage=100&prMx=8000&rd=50&searchSource=GN_REFINEMENT&sort=relevance&zc=08540"
 headers={"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36"}
-cars_row_type= "shop-srp-listings__inner" #"listing-row__details"
+c7ars_row_type= "shop-srp-listings__inner" #"listing-row__details"
 price_name="listing-row__price"
 stats_name = "listing-row__save switch-favorite unsaved saveVehicleHeart compare-switch-favorite"
 # =============================================================================
